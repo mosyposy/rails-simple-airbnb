@@ -1,0 +1,14 @@
+<h1>Add a new flat</h1>
+<p>Find me in app/views/flats/new.html.erb</p>
+
+<% if @flat.errors.any? %>
+  <ul>
+    <% @flat.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render 'form', flat: @flat %>
+
+<%= link_to 'Back', flats_path %>
